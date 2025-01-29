@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middö</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h5>Recibe ahora por mensaje acceso a Calculadora <span>Rápida</span></h5>
+            
+                <form>
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Teléfono">
+                    <select name="" id="" >
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                    </select>
+                    <select name="" id="" >
+                        <option value="adsf">Previsión de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                    </select>
+                    <select name="" id="" >
+                        <option value="adsf">Provincia de la reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                    </select>
+                    <input type="text" placeholder="Teléfono">
+                    <select name="" id="" >
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                    </select>
+                    <select name="" id="" >
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                        <option value="adsf">Selecciona tipo de reforma</option>
+                    </select>
+                </form>
+            
+            <div class="checkbox">
+                <input type="checkbox" name="politica" id="" value=""><label for="politica">Acepto la política de privacidad</label>
+            </div>
+            <button class="btn btn-red">Acceder a calculadora</button>
+        </div>
+    </div>
+    <header>
+        <div class="desktop">
+            <a href="#">middö</a>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li>Servicios</li>
+                        <li >Calculadora</li>
+                        <li>Estilo</li>
+                        <li>Proyectos</li>
+                        <li>Opiniones</li>
+                        <li>Contacto</li>
+                        <li>Blog</li>
+                    </ul>
+                </nav>
+                <a class="btn btn-nav">Te llamamos</a>
+            </div>
+        </div>
+        <div class="mobile">
+            <i class="fa-solid fa-bars"></i>
+            <a href="#">middö</a>
+            <div class="nav">
+                <a class="btn">Te llamamos</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="titulo" class="contenido">
+            <h1>Calculadora de <br> reformas</h1>
+            <p>Conoce algunos de nuestros trabajos</p>
+        </section>
+
+        <section class="contenido calculadora">
+            <h2>Tu precio en la <span>Calculadora rápida</span> en solo 2 minutos.</h2>
+            <p>No esperes más y consigue un precio rápido para saber cuanto cuesta aproximadamente la reforma que
+                quieres realizar. Te ofrecemos el precio para 3 gamas Económica, Confort y Premium.</p>
+
+            <!-- Tarjetas originales son una imagen -->
+            <div class="cards">
+                <div class="card-reforma">
+                    <h3>Reforma integral</h3>
+                    <div class="row">
+                        <div class="col">Gama Económica</div>
+                        <div class="col">36.850 €</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Gama Confort</div>
+                        <div class="col">44.780 €</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Gama Premium</div>
+                        <div class="col">58.780 €</div>
+                    </div>
+                    <p>*Ejemplo piso 70 m2</p>
+                </div>
+
+                <div class="card-reforma">
+                    <h3>Reforma de cocina</h3>
+                    <div class="row">
+                        <div class="col">Gama Económica</div>
+                        <div class="col">12.140 €</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Gama Confort</div>
+                        <div class="col">16.440 €</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Gama Premium</div>
+                        <div class="col">26.900 €</div>
+                    </div>
+                    <p>*Ejemplo cocina 7 m2</p>
+                </div>
+
+                <div class="card-reforma">
+                    <h3>Reforma de Baño</h3>
+                    <div class="row">
+                        <div class="col">Gama Económica</div>
+                        <div class="col">12.140 €</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Gama Confort</div>
+                        <div class="col">16.440 €</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Gama Premium</div>
+                        <div class="col">26.900 €</div>
+                    </div>
+                    <p>*Ejemplo Baño 5 m2</p>
+                </div>
+            </div>
+            <button id="calculadora" class="btn" onclick="calcularReforma()">Calcula rápido TU REFORMA</button>
+            <script>
+                const popup = document.getElementById('popup');
+                const btnCalculadora = document.getElementById('calculadora');
+
+                btnCalculadora.addEventListener('click', () => {
+                    popup.classList.remove('hidden');
+                });
+
+                popup.addEventListener( 'click', (event) => {
+                    if (event.target === popup) {
+                        popup.classList.add('hidden');
+                    }
+                });
+            </script>
+        </section>
+
+        <section class="contenido presupuesto">
+            <div class="precio-justo">
+                <p>SI YA TIENES CLARO QUE HARÁS TU REFORMA</p>
+                <h2>El precio justo para tu reforma.</h2>
+            </div>
+            <div class="solicitar-presupuesto">
+                <p>Si buscas un precio definitivo para una reforma que tienes en mente solicita directamente un
+                    presupuesto.</p>
+                <button class="btn btn-red">Solicitar presupuesto</button>
+            </div>
+        </section>
+        <section class="contenido acceso-stylo">
+            <h2>Accede ahora GRATIS a <span>Stylö.</span></h2>
+
+            <p>Accediendo a la calculadora también accedes a Stylö, nuestro recomendador gratuito de estilos de cocinas
+                y reformas.</p>
+
+            <div class="list-cards-stylo">
+                <div class="card-stylo">
+                    <img src="img.jpg" alt="Lahti">
+                    <p>Lahti</p>
+                </div>
+                <div class="card-img-stylo">
+                    <img src="img.jpg" alt="Lahti">
+                    <p>Ameland</p>
+                </div>
+                <div class="card-img-stylo">
+                    <img src="img.jpg" alt="Lahti">
+                    <p>Goteborg</p>
+                </div>
+            </div>
+
+            <p>Si estás buscando tu estilo de reforma entra gratis a Stylö y encuentra tu nueva cocina. Si la hces con
+                nosotros te ayudamos con estilo, distribución y render personalizado.</p>
+
+            <button>Acceder Gratis a Stylö</button>
+        </section>
+
+        <section class="contenido antes-despues">
+            <h2>Mira algunos videos de Antes y Después</h2>
+            <button class="btn btn-red"><i aria-hidden="true" class="fas fa-arrow-right"></i>Ver Antes y Después de Reformas</button>
+        </section>
+
+        <section class="contenido reformas-middo">
+            <h2>Mira las reformas de Middö</h2>
+            <div class="list-cards-reformas">
+                <div class="card-reforma">
+                    <img src="img.jpg" alt="Verdaguer">
+                    <h3>Reforma integral en Verdaguer (Barcelona)</h3>
+                </div>
+                <div class="card-reforma">
+                    <img src="img.jpg" alt="Gràcia">
+                    <h3>Reforma parcial en Gràcia (Barcelona)</h3>
+                </div>
+                <div class="card-reforma">
+                    <img src="img.jpg" alt="Sants">
+                    <h3>Reforma integral en Sants (Barcelona)</h3>
+                </div>
+                <div class="card-reforma">
+                    <img src="img.jpg" alt="Les Corts">
+                    <h3>Reforma integral en Les Corts (Barcelona)</h3>
+                </div>
+            </div>
+            <button>Ver más ejemplos de reformas</button>
+        </section>
+    </main>
+    <footer class="contenido">
+        <div class="site-footer">
+            <p>&copy; 2018, middö</p>
+            <p><a href="#">Política de Cookies y Privacidad</a> | <a href="#">Términos y condiciones</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
