@@ -1,0 +1,26 @@
+name: Deploy to InfinityFree
+
+on:
+  push:
+    branches:
+      - main  # Se ejecuta cuando hay cambios en main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Git-FTP
+        run: |
+          sudo apt-get update && sudo apt-get install -y git-ftp
+
+      - name: Deploy via Git-FTP
+        run: |
+          git ftp init --insecure --user="$FTP_USERNAME" --passwd="$FTP_PASSWORD" ftp://$FTP_HOST$FTP_PATH
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_PATH: ${{ secrets.FTP_PATH }}
