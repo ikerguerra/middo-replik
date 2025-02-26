@@ -16,11 +16,13 @@ jobs:
       - name: Install Git-FTP
         run: sudo apt-get install -y git-ftp
 
-      - name: Deploy via Git-FTP
+      - name: Force Upload on Unknown SHA1 Error
         run: |
-          git ftp push --auto-init --insecure --user="$FTP_USERNAME" --passwd="$FTP_PASSWORD" ftp://$FTP_HOST$FTP_PATH
+          git ftp push --auto-init --insecure --user="$FTP_USERNAME" --passwd="$FTP_PASSWORD" ftp://$FTP_HOST$FTP_PATH || \
+          (echo "SHA1 mismatch detected. Forcing full upload..." && git ftp catchup --insecure --user="$FTP_USERNAME" --passwd="$FTP_PASSWORD" ftp://$FTP_HOST$FTP_PATH && git ftp push --insecure --user="$FTP_USERNAME" --passwd="$FTP_PASSWORD" ftp://$FTP_HOST$FTP_PATH)
         env:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_PATH: ${{ secrets.FTP_PATH }}
+
