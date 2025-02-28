@@ -56,20 +56,21 @@
     </div>
     <header>
         <div class="desktop">
-            <a href="/index.html">middö</a>
+            <a href="index.php">middö</a>
             <div class="nav">
                 <nav>
                     <ul>
-                        <li>Servicios</li>
-                        <li >Calculadora</li>
-                        <li>Estilo</li>
-                        <li>Proyectos</li>
-                        <li>Opiniones</li>
-                        <li>Contacto</li>
-                        <li>Blog</li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Calculadora</a></li>
+                        <li><a href="#">Estilo</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Opiniones</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="contacto.php">Contacto</a></li>
+                        <li><a href="#">Blog</a></li>
                     </ul>
                 </nav>
-                <a class="btn btn-nav" href="tellamamos.html">Te llamamos</a>
+                <a class="btn btn-nav" href="tellamamos.php">Te llamamos</a>
             </div>
         </div>
         <div class="mobile">
@@ -82,9 +83,8 @@
     </header>
     <main>
         <section id="titulo" class="contenido">
-            <h1>Te llamamos</h1>
-            <p>Prueba despliegue</p>
-            <p>Prueba despliegue 2</p>
+            <h1>Calculadora de <br> reformas</h1>
+            <p>Conoce algunos de nuestros trabajos</p>
         </section>
 
         <section class="contenido calculadora">

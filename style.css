@@ -108,12 +108,13 @@ h5 {
 }
 
 ul,
-li {
+li a{
     display: flex;
     gap: 18px;
     font-size: 16px;
     color: #0a0a0a;
     font-weight: 500;
+    list-style: none;
 }
 
 span {
@@ -298,11 +299,11 @@ select {
 
 @media (min-width: 768px) {
 
-    nav li {
+    nav li a{
         color: #757575;
     }
 
-    nav li:hover {
+    nav li a:hover {
         color: #cbbba2;
         cursor: pointer;
     }

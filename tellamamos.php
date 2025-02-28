@@ -16,60 +16,62 @@
     <div id="popup" class="popup hidden">
         <div class="popup-content">
             <h5>Recibe ahora por mensaje acceso a Calculadora <span>Rápida</span></h5>
-            
-                <form>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Teléfono">
-                    <select name="" id="" >
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                    </select>
-                    <select name="" id="" >
-                        <option value="adsf">Previsión de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                    </select>
-                    <select name="" id="" >
-                        <option value="adsf">Provincia de la reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                    </select>
-                    <input type="text" placeholder="Teléfono">
-                    <select name="" id="" >
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                    </select>
-                    <select name="" id="" >
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                        <option value="adsf">Selecciona tipo de reforma</option>
-                    </select>
-                </form>
-            
+
+            <form>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Teléfono">
+                <select name="" id="">
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                </select>
+                <select name="" id="">
+                    <option value="adsf">Previsión de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                </select>
+                <select name="" id="">
+                    <option value="adsf">Provincia de la reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                </select>
+                <input type="text" placeholder="Teléfono">
+                <select name="" id="">
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                </select>
+                <select name="" id="">
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                    <option value="adsf">Selecciona tipo de reforma</option>
+                </select>
+            </form>
+
             <div class="checkbox">
-                <input type="checkbox" name="politica" id="" value=""><label for="politica">Acepto la política de privacidad</label>
+                <input type="checkbox" name="politica" id="" value=""><label for="politica">Acepto la política de
+                    privacidad</label>
             </div>
             <button class="btn btn-red">Acceder a calculadora</button>
         </div>
     </div>
     <header>
         <div class="desktop">
-            <a href="/index.html">middö</a>
+            <a href="index.php">middö</a>
             <div class="nav">
                 <nav>
                     <ul>
-                        <li>Servicios</li>
-                        <li >Calculadora</li>
-                        <li>Estilo</li>
-                        <li>Proyectos</li>
-                        <li>Opiniones</li>
-                        <li>Contacto</li>
-                        <li>Blog</li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Calculadora</a></li>
+                        <li><a href="#">Estilo</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Opiniones</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="contacto.php">Contacto</a></li>
+                        <li><a href="#">Blog</a></li>
                     </ul>
                 </nav>
-                <a class="btn btn-nav" href="tellamamos.html">Te llamamos</a>
+                <a class="btn btn-nav" href="tellamamos.php">Te llamamos</a>
             </div>
         </div>
         <div class="mobile">
@@ -82,8 +84,9 @@
     </header>
     <main>
         <section id="titulo" class="contenido">
-            <h1>Calculadora de <br> reformas</h1>
-            <p>Conoce algunos de nuestros trabajos</p>
+            <h1>Te llamamos</h1>
+            <p>Prueba despliegue</p>
+            <p>Prueba despliegue 2</p>
         </section>
 
         <section class="contenido calculadora">
@@ -153,7 +156,7 @@
                     popup.classList.remove('hidden');
                 });
 
-                popup.addEventListener( 'click', (event) => {
+                popup.addEventListener('click', (event) => {
                     if (event.target === popup) {
                         popup.classList.add('hidden');
                     }
@@ -201,7 +204,8 @@
 
         <section class="contenido antes-despues">
             <h2>Mira algunos videos de Antes y Después</h2>
-            <button class="btn btn-red"><i aria-hidden="true" class="fas fa-arrow-right"></i>Ver Antes y Después de Reformas</button>
+            <button class="btn btn-red"><i aria-hidden="true" class="fas fa-arrow-right"></i>Ver Antes y Después de
+                Reformas</button>
         </section>
 
         <section class="contenido reformas-middo">
